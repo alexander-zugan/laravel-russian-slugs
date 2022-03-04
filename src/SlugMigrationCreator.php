@@ -37,9 +37,9 @@ class SlugMigrationCreator extends MigrationCreator
      * @param  string $table
      * @return string
      */
-    protected function populateStub($name, $stub, $table)
+    protected function populateStub($stub, $table)
     {
-        $stub = parent::populateStub($name, $stub, $table);
+        $stub = parent::populateStub($stub, $table);
         return str_replace('DummyColumn', $this->column, $stub);
     }
 
